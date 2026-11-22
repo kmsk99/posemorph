@@ -1,0 +1,24 @@
+{
+  "positive": [
+    "An artwork showing Archangel Michael defeating Satan or the dragon beneath his feet.",
+    "A painting or sculpture of an angel standing on a fallen demon and raising a sword or spear.",
+    "Saint Michael the Archangel slaying the dragon, with the defeated dragon visible at his feet.",
+    "A wooden church statue of Saint Michael, a winged warrior with a raised spear and a dragon under his feet.",
+    "A sculpture of Saint Michael thrusting a spear into the devil at his feet."
+  ],
+  "negative": [
+    "A single saint standing alone without a demon or dragon.",
+    "An icon of a different saint wearing a red robe.",
+    "A portrait showing only a face or bust.",
+    "Architectural ornament or a stone building without a visible figure.",
+    "A page of text or an inscription.",
+    "A flat decorative illustrated tile without a battle scene.",
+    "A human painter holding a paintbrush and palette, painting at an easel.",
+    "A monk or bishop standing in robes, with a dog or lamb instead of a defeated demon.",
+    "A kneeling human donor or worshipper next to a saint.",
+    "A saint holding a large wooden cross, without a defeated demon or dragon.",
+    "An isolated winged angel statue on an empty pedestal against a wall.",
+    "An angel flying or sitting among empty clouds.",
+    "An angel standing alone holding a sword and scales."
+  ]
+}

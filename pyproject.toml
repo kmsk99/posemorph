@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "posemorph"
+version = "0.1.0"
+description = "Pose-aligned montage and landmark morphs from image collections"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "kmsk99" }]
+keywords = ["pose", "pose-estimation", "montage", "morph", "video", "art", "onnx"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Multimedia :: Graphics",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = ["numpy>=2.0,<3", "opencv-python>=4.10,<6", "Pillow>=11,<14", "scipy>=1.14,<2", "onnxruntime>=1.20,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.9"]
+relevance = ["torch>=2.6,<3", "transformers>=5,<6"]
+
+[project.urls]
+Homepage = "https://github.com/kmsk99/posemorph"
+Issues = "https://github.com/kmsk99/posemorph/issues"
+
+[project.scripts]
+posemorph = "posemorph.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["model: real ONNX inference (requires cached weights or network; opt in with --run-model)"]
+
+[tool.hatch.build.targets.sdist]
+exclude = ["docs/assets/*.gif", "docs/assets/*.jpg", "out", "AGENTS.md"]
