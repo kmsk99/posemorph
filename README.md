@@ -8,17 +8,15 @@ on screen, sorts the pictures so that similar poses sit next to each other,
 and renders a video: quick cuts, or a morph that bends one pose into the next.
 
 <p align="center">
-  <img src="docs/assets/before-after.gif" alt="Left: 14 photos of Anna Pavlova in the order they were given, jumping around in size and position. Right: the same photos after posemorph, with her head and body fixed in place and similar poses next to each other." width="600">
+  <img src="docs/assets/before-after.gif" alt="Left: 85 renders of one 3D character doing different actions from three camera angles, in shuffled order, jumping around in size and position. Right: the same images after posemorph, with her head and body fixed in place and similar poses following each other, so she seems to move." width="600">
 </p>
 
-*Left: 14 public-domain photos of the ballerina Anna Pavlova (1881–1931), as given.
-Right: the same photos after `posemorph run`. Her head and torso stay put, and
-standing, seated and dancing poses are grouped. Sources: [CREDITS](docs/assets/CREDITS.md).*
+*Left: 85 renders of one CC0 3D character (walking, running, jumping, punching, picking up) from three camera angles, shuffled. Right: the same images after `posemorph run`. Her head and torso stay put, and each image is followed by a similar pose. Sources: [CREDITS](docs/assets/CREDITS.md).*
 
 <table>
 <tr>
-<td align="center" width="38%"><img src="docs/assets/morph.gif" alt="Morph video: each Pavlova photo warps smoothly into the next pose" width="270"><br><sub><code>--mode morph</code>: landmark-driven warps between poses</sub></td>
-<td align="center"><img src="docs/assets/contact-sheet.jpg" alt="Contact sheet: the 14 photos in output order with the detected skeleton drawn on each" width="100%"><br><sub><code>contact-sheet.jpg</code>: what was detected, and the order chosen</sub></td>
+<td align="center" width="38%"><img src="docs/assets/morph.gif" alt="Morph video: each image warps smoothly into the next pose" width="270"><br><sub><code>--mode morph</code>: landmark-driven warps between poses</sub></td>
+<td align="center"><img src="docs/assets/contact-sheet.jpg" alt="Contact sheet: the first 24 images in output order with the detected skeleton drawn on each" width="100%"><br><sub><code>contact-sheet.jpg</code> (first 24 of 85): what was detected, and the order chosen</sub></td>
 </tr>
 </table>
 
@@ -37,7 +35,7 @@ or PyTorch needed. Licensed under [Apache-2.0](LICENSE).
 | 6. **report** | Contact sheet with skeletons, rejection counts, and how much smoother the order is than a random one | `report.json`, `contact-sheet.jpg` |
 
 In the demo above, the average pose jump between consecutive pictures dropped
-from 0.87 (random order) to 0.52.
+from 0.60 (random order) to 0.30.
 
 ## Install
 
@@ -135,4 +133,4 @@ Copyright 2026 kmsk99. posemorph is licensed under the
 [Apache License, Version 2.0](LICENSE). The license covers this code only;
 model weights downloaded at runtime keep their own terms (see
 [docs/models.md](docs/models.md)), and it grants no rights to your input images.
-The demo images are public domain; see [CREDITS](docs/assets/CREDITS.md).
+The demo character is CC0 (Quaternius); see [CREDITS](docs/assets/CREDITS.md).
